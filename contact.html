@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Blue Thought Studios</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow">Let's Talk</p>
+        <h2>Contact</h2>
+        <p>
+          Have a project, a question, or an idea that's half-formed but interesting?
+          Send it over. Clear briefs are great — rough ideas are also fine.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         AVAILABILITY WIDGET
+         To update slots: find SLOTS_AVAILABLE below
+         and change the number. That's the only edit needed.
+         ═══════════════════════════════════════════════ -->
+    <div class="avail-wrap">
+      <div class="container">
+        <div class="avail-banner" id="availBanner">
+          <div class="avail-left">
+            <span class="avail-dot" id="availDot"></span>
+            <div>
+              <p class="avail-title" id="availTitle"></p>
+              <p class="avail-sub"   id="availSub"></p>
+            </div>
+          </div>
+          <div class="avail-right">
+            <div class="avail-pips" id="availPips"></div>
+            <span class="avail-label" id="availLabel"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="overview" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Left: Info -->
+          <div class="contact-info">
+            <p class="section-label">How to Reach Us</p>
+            <h2>Start a Conversation</h2>
+            <p>
+              Use the form or reach out directly. Either way, you'll get a real response
+              — not an auto-reply that goes nowhere.
+            </p>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📧</div>
+              <div class="contact-item-text">
+                <strong>Email</strong>
+                <span>bluethefurydragon@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">⏱️</div>
+              <div class="contact-item-text">
+                <strong>Response Time</strong>
+                <span>Typically within 24–48 hours</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">🤝</div>
+              <div class="contact-item-text">
+                <strong>Collaborations</strong>
+                <span>Open to long-term creative projects and partnerships</span>
+              </div>
+            </div>
+
+            <div class="notice" style="margin-top: 1.5rem;">
+              <strong>Tip:</strong> The more context you give upfront — scope, deadline, references —
+              the faster we can move.
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form">
+            <p class="section-label">Project Brief</p>
+
+            <!--
+              FORMSPREE SETUP — 3 STEPS:
+              1. Go to formspree.io and create a free account
+              2. Click "New Form" — copy the endpoint URL it gives you
+              3. Replace YOUR_FORMSPREE_ENDPOINT below with that URL
+                 e.g. https://formspree.io/f/xabcdefg
+              Done. Every submission goes straight to your email.
+            -->
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mdaywled"
+              method="POST"
+            >
+              <input type="hidden" name="_next"    value="contact.html?sent=true" />
+              <input type="hidden" name="_subject" value="New project request — Blue Thought Studios" />
+              <input type="text"   name="_gotcha"  style="display:none" tabindex="-1" autocomplete="off" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" name="fname" placeholder="Alex" required />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" name="lname" placeholder="Morgan" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                  <option value="" disabled selected>Select a service...</option>
+                  <option value="Art & Illustration">Art & Illustration</option>
+                  <option value="Book & Cover Art">Book & Cover Art</option>
+                  <option value="Voice-Over">Voice-Over</option>
+                  <option value="Photo Editing">Photo Editing</option>
+                  <option value="Video Editing">Video Editing</option>
+                  <option value="Writing">Writing</option>
+                  <option value="Custom / Not Sure Yet">Custom / Not Sure Yet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Rough Budget (Optional)</label>
+                <input type="text" id="budget" name="budget" placeholder="e.g. $50, flexible, not sure yet" />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Project Details</label>
+                <textarea id="message" name="message" placeholder="Tell me about the project — what it is, what you need, any relevant references or deadlines..." required></textarea>
+              </div>
+
+              <button type="submit" class="form-submit" id="submitBtn">Send Message →</button>
+            </form>
+
+            <!-- Shown after Formspree redirects back with ?sent=true -->
+            <div id="successMsg" style="display:none; text-align:center; padding: 2rem 0;">
+              <p style="font-size: 2rem; margin-bottom: 0.75rem;">✓</p>
+              <p style="font-weight: 600; color: var(--text); margin-bottom: 0.4rem;">Message sent.</p>
+              <p style="font-size: 0.88rem; color: var(--muted);">I'll get back to you within 24–48 hours.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    // ═══════════════════════════════════════════════════
+    // AVAILABILITY — EDIT THIS NUMBER EACH MONTH
+    // Set to how many new client slots you have open.
+    // 0 = fully booked, anything above 0 = open.
+    const SLOTS_AVAILABLE = 5;   // ← change this
+    const SLOTS_TOTAL     = 5;   // ← total slots per month (your cap)
+    // ═══════════════════════════════════════════════════
+
+    (function renderAvailability() {
+      const dot    = document.getElementById('availDot');
+      const title  = document.getElementById('availTitle');
+      const sub    = document.getElementById('availSub');
+      const pips   = document.getElementById('availPips');
+      const label  = document.getElementById('availLabel');
+      const btn    = document.getElementById('submitBtn');
+
+      // Build pip indicators
+      for (let i = 0; i < SLOTS_TOTAL; i++) {
+        const pip = document.createElement('span');
+        pip.className = 'avail-pip' + (i < SLOTS_AVAILABLE ? ' filled' : '');
+        pips.appendChild(pip);
+      }
+
+      if (SLOTS_AVAILABLE === 0) {
+        dot.className   = 'avail-dot red';
+        title.textContent = 'Fully booked this month';
+        sub.textContent   = 'No open slots right now — check back next month or send a message to get on the waitlist.';
+        label.textContent = '0 / ' + SLOTS_TOTAL + ' slots';
+        if (btn) {
+          btn.textContent = 'Join the Waitlist →';
+          btn.style.background = 'var(--muted)';
+        }
+      } else if (SLOTS_AVAILABLE === 1) {
+        dot.className   = 'avail-dot yellow';
+        title.textContent = 'Last slot available';
+        sub.textContent   = 'Only 1 opening left this month. If you have a project ready, now\'s the time.';
+        label.textContent = '1 / ' + SLOTS_TOTAL + ' slots';
+      } else if (SLOTS_AVAILABLE <= Math.floor(SLOTS_TOTAL / 2)) {
+        dot.className   = 'avail-dot yellow';
+        title.textContent = 'Limited availability';
+        sub.textContent   = SLOTS_AVAILABLE + ' slots open this month. Projects are filled on a first-come basis.';
+        label.textContent = SLOTS_AVAILABLE + ' / ' + SLOTS_TOTAL + ' slots';
+      } else {
+        dot.className   = 'avail-dot green';
+        title.textContent = 'Currently accepting projects';
+        sub.textContent   = SLOTS_AVAILABLE + ' slots open this month. Reach out and let\'s get started.';
+        label.textContent = SLOTS_AVAILABLE + ' / ' + SLOTS_TOTAL + ' slots';
+      }
+    })();
+
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+
+    // Show success state if Formspree redirected back after submission
+    if (window.location.search.includes('sent=true')) {
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('successMsg').style.display  = 'block';
+    }
+  </script>
+
+</body>
+</html>

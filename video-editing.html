@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video Editing | Blue Thought Studios</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../services.html" class="active">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../pricing.html">Pricing</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow"><a href="../services.html" style="color:inherit;text-decoration:none;">Services</a> &nbsp;/&nbsp; Video Editing</p>
+        <h2>🎬 Video Editing</h2>
+        <p>
+          DaVinci Resolve-based editing that keeps people watching.
+          Pacing, color, and flow — the three things that separate a good video from one that gets closed in 30 seconds.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <div class="overview-header">
+          <p class="section-label">What's Included</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <span class="card-icon">✂️</span>
+            <h3>Cuts & Pacing</h3>
+            <p>Trimming dead air, tightening delivery, keeping the energy up. The edit that makes raw footage engaging.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🎨</span>
+            <h3>Color Grading</h3>
+            <p>DaVinci color correction and creative grading that gives the video a consistent, clean look.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🔊</span>
+            <h3>Audio Sync & Cleanup</h3>
+            <p>Audio levels balanced, music synced, background noise reduced. Sound that doesn't fight the visuals.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📤</span>
+            <h3>Platform-Ready Export</h3>
+            <p>Delivered in the right format and specs — YouTube, Instagram, TikTok, or wherever it's going live.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Who This Is For</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <h3>YouTube Creators</h3>
+            <p>Consistent, well-paced long-form edits that keep your audience through to the end card.</p>
+          </div>
+          <div class="card">
+            <h3>Short-form & Social</h3>
+            <p>Reels, Shorts, TikTok-style clips with tight pacing and attention-grabbing cuts from the first second.</p>
+          </div>
+          <div class="card">
+            <h3>Brands & Businesses</h3>
+            <p>Product videos or promotional content.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Pricing</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2.5rem;">
+          <div class="pricing-card">
+            <h3>Short-form</h3>
+            <div class="price">$25 – $60</div>
+            <p class="price-note">per 3–5 min video</p>
+            <div class="pricing-divider"></div>
+            <p>Cuts, pacing, color, and basic sound. Fast turnaround for social-first content.</p>
+          </div>
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Best Value</span>
+            <h3>Long-form / YouTube</h3>
+            <div class="price">$70 – $120</div>
+            <p class="price-note">per 10–20 min video</p>
+            <div class="pricing-divider"></div>
+            <p>Full edit — cuts, transitions, color grading, audio balancing, and basic motion. Built for YouTube retention.</p>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Regular upload schedule?</strong> Monthly packages are available for creators who need consistent turnaround without renegotiating every time.
+          <a href="../contact.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Let's talk.</a>
+        </div>
+
+        <div style="margin-top: 2.5rem; display:flex; gap: 1rem; flex-wrap:wrap;">
+          <a href="../contact.html" class="btn-primary">Request This Service →</a>
+          <a href="../services.html" class="btn-ghost">← Back to Services</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="../services.html">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Blue Thought Studios</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow">What We Offer</p>
+        <h2>Services</h2>
+        <p>
+          A curated set of creative services.
+         <br> Pick what fits your project and we'll build from there.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+        <div class="grid">
+
+          <div class="card">
+            <span class="card-icon">🎨</span>
+            <h3>Art & Illustration</h3>
+            <p>Digital art, illustrations, and visual concepts.</p>
+            <a href="./services categories/art-illustration.html" class="btn-ghost">View Details →</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon">📖</span>
+            <h3>Book & Cover Art</h3>
+            <p>Book covers and visual storytelling for authors and publishers. Design that earns the reader before they open a page.</p>
+            <a href="./services categories/book-cover-art.html" class="btn-ghost">View Details →</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon">🎙️</span>
+            <h3>Voice-Over</h3>
+            <p>Narration and character voice work for media, games, and digital content. Clear and natural, and easy to direct.</p>
+            <a href="./services categories/voice-over.html" class="btn-ghost">View Details →</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon">📸</span>
+            <h3>Photo Editing</h3>
+            <p>Photoshop-based retouching, cleanup, and creative manipulation. Your image, on steroids.</p>
+            <a href="./services categories/photo-editing.html" class="btn-ghost">View Details →</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon">🎬</span>
+            <h3>Video Editing</h3>
+            <p>DaVinci Resolve edits — short-form to long-form YouTube content. Pacing, flow, and color enhancments that keep people watching.</p>
+            <a href="./services categories/video-editing.html" class="btn-ghost">View Details →</a>
+          </div>
+
+          <div class="card">
+            <span class="card-icon">✍️</span>
+            <h3>Writing</h3>
+            <p>Articles, creative writing, newsletters, and journalism-style content. Readable, clear, and actually interesting.</p>
+            <a href="./services categories/writing.html" class="btn-ghost">View Details →</a>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          <strong>Custom project?</strong> If what you need doesn't fit neatly into one category — that's fine.
+          <a href="contact.html" style="color: var(--accent); text-decoration: none; font-weight:600;">Describe your idea</a>
+          and we'll figure out the right approach together.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>

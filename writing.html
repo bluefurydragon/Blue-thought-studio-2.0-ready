@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing | Blue Thought Studios</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../services.html" class="active">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../pricing.html">Pricing</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow"><a href="../services.html" style="color:inherit;text-decoration:none;">Services</a> &nbsp;/&nbsp; Writing</p>
+        <h2>✍️ Writing</h2>
+        <p>
+          Writing that says something. Not filler content optimized for nothing,
+          not AI slop lightly edited to pass detection — actual writing, with a point of view.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <div class="overview-header">
+          <p class="section-label">What's Included</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <span class="card-icon">📰</span>
+            <h3>Articles & Blog Posts</h3>
+            <p>Researched, readable articles for web or print. Written to inform — not to hit a keyword count.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📬</span>
+            <h3>Newsletters</h3>
+            <p>Email content that people actually open. Consistent voice, something worth saying, concise enough to read.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📖</span>
+            <h3>Creative Writing</h3>
+            <p>Short fiction, narrative pieces, scripts, or story concepts. Writing that has an actual shape to it.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🗞️</span>
+            <h3>Journalism-style Content</h3>
+            <p>Feature-style writing for publications, zines, or editorial platforms. Structured, sourced, readable.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Who This Is For</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <h3>Brands & Businesses</h3>
+            <p>Need consistent written content but don't have a writer on the team. Articles, copy, newsletters — handled.</p>
+          </div>
+          <div class="card">
+            <h3>Independent Creators</h3>
+            <p>Substack, a personal blog, a pitch deck narrative — writing that sounds like you, but sharper.</p>
+          </div>
+          <div class="card">
+            <h3>Publications & Platforms</h3>
+            <p>Editorial content, contributor pieces, or feature writing from someone who understands what good structure looks like.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Pricing</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2.5rem;">
+          <div class="pricing-card">
+            <h3>Articles & Blog Content</h3>
+            <div class="price">$10 – $25</div>
+            <p class="price-note">per article</p>
+            <div class="pricing-divider"></div>
+            <p>500–700 words with basic research included. Longer pieces or niche research topics are priced separately.</p>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Need something longer or ongoing?</strong> Series pricing, retainer arrangements, and word-count-based rates are all available.
+          <a href="../contact.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Send the scope.</a>
+        </div>
+
+        <div style="margin-top: 2.5rem; display:flex; gap: 1rem; flex-wrap:wrap;">
+          <a href="../contact.html" class="btn-primary">Request This Service →</a>
+          <a href="../services.html" class="btn-ghost">← Back to Services</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="../services.html">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice-Over | Blue Thought Studios</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../services.html" class="active">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../pricing.html">Pricing</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow"><a href="../services.html" style="color:inherit;text-decoration:none;">Services</a> &nbsp;/&nbsp; Voice-Over</p>
+        <h2>🎙️ Voice-Over</h2>
+        <p>
+          Natural, controlled delivery — not the kind that sounds like it came from a text-to-speech engine
+          with a slider called "enthusiasm." Real voice, real presence.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <div class="overview-header">
+          <p class="section-label">What's Included</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <span class="card-icon">🎧</span>
+            <h3>Narration & Documentary</h3>
+            <p>Clear, measured delivery for explainers, documentaries, educational content, and long-form narration.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🎮</span>
+            <h3>Character Voice Work</h3>
+            <p>Distinct character voices for games, animation, and interactive media.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📣</span>
+            <h3>Commercial & Promo</h3>
+            <p>Ad reads, product promos, and brand voice work that sounds clean.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🎚️</span>
+            <h3>Cleaned Audio Delivery</h3>
+            <p>Delivered as high-quality audio files (WAV or MP3) with noise reduction and basic mastering applied.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Who This Is For</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <h3>Game Developers</h3>
+            <p>Indie devs who want real character voices without AAA studio budgets.</p>
+          </div>
+          <div class="card">
+            <h3>Video Creators & Educators</h3>
+            <p>YouTube, eLearning, or explainer content that needs a voice that keeps people engaged past the first minute.</p>
+          </div>
+          <div class="card">
+            <h3>Brands & Advertisers</h3>
+            <p>Ads and branded audio content that sounds like your brand has a voice — not just a message.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Pricing</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2.5rem;">
+          <div class="pricing-card">
+            <h3>Voice-Over</h3>
+            <div class="price">$15 – $40</div>
+            <p class="price-note">per finished minute</p>
+            <div class="pricing-divider"></div>
+            <p>Priced per finished minute of audio. Rate depends on script complexity, tone, and usage rights.</p>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Need a sample first?</strong> Send a short script excerpt and we'll record a short demo so you know exactly what you're getting before committing.
+          <a href="../contact.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Request a sample.</a>
+        </div>
+
+        <div style="margin-top: 2.5rem; display:flex; gap: 1rem; flex-wrap:wrap;">
+          <a href="../contact.html" class="btn-primary">Request This Service →</a>
+          <a href="../services.html" class="btn-ghost">← Back to Services</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="../services.html">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>

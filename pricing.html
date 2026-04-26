@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Blue Thought Studios</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow">What It Costs</p>
+        <h2>Pricing</h2>
+        <p>
+          Starting rates for every service. All prices are flexible depending on scope, complexity, and timeline —
+          reach out and we'll figure out what makes sense for your project.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <!-- Art & Illustration -->
+        <div class="overview-header">
+          <p class="section-label">Art & Design</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 3rem;">
+
+          <div class="pricing-card">
+            <h3>Art & Illustration</h3>
+            <div class="price">$20 – $50</div>
+            <p class="price-note">per piece</p>
+            <div class="pricing-divider"></div>
+            <p>Simple to mid-complexity illustrations. 1–2 revisions included.</p>
+          </div>
+
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Most Requested</span>
+            <h3>Book & Cover Art</h3>
+            <div class="price">$30 – $60</div>
+            <p class="price-note">per cover</p>
+            <div class="pricing-divider"></div>
+            <p>Full cover design with layout, typography, and basic composition for authors and publishers.</p>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Photo Editing</h3>
+            <div class="price">$10 – $30</div>
+            <p class="price-note">per image</p>
+            <div class="pricing-divider"></div>
+            <p>Retouching, cleanup, color correction, and creative enhancements.</p>
+          </div>
+
+        </div>
+
+        <!-- Video & Audio -->
+        <div class="overview-header">
+          <p class="section-label">Video & Audio</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 3rem;">
+
+          <div class="pricing-card">
+            <h3>Voice-Over</h3>
+            <div class="price">$15 – $40</div>
+            <p class="price-note">per minute</p>
+            <div class="pricing-divider"></div>
+            <p>Clear, natural delivery with clean audio. Suitable for narration, characters, and media.</p>
+          </div>
+
+          <div class="pricing-card">
+            <h3>Video Editing — Short-form</h3>
+            <div class="price">$25 – $60</div>
+            <p class="price-note">per 3–5 min video</p>
+            <div class="pricing-divider"></div>
+            <p>Cuts, pacing, color correction, and basic motion. Fast turnaround.</p>
+          </div>
+
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Best Value</span>
+            <h3>Video Editing — Long-form</h3>
+            <div class="price">$70 – $120</div>
+            <p class="price-note">per 10–20 min video</p>
+            <div class="pricing-divider"></div>
+            <p>Full YouTube-style edit — cuts, transitions, pacing, color correction, and basic sound design.</p>
+          </div>
+
+        </div>
+
+        <!-- Writing -->
+        <div class="overview-header">
+          <p class="section-label">Writing</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2rem;">
+
+          <div class="pricing-card">
+            <h3>Articles & Content Writing</h3>
+            <div class="price">$10 – $25</div>
+            <p class="price-note">per article</p>
+            <div class="pricing-divider"></div>
+            <p>500–700 words. Simple research included. Clear, readable, and on point.</p>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          <strong>All services include 1–2 free revisions.</strong> Additional revisions or scope changes may incur extra fees.
+          Not sure about your budget? <a href="contact.html" style="color: var(--accent); text-decoration:none; font-weight:600;">Send your brief</a> — no commitment required.
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align: center;">
+          <a href="contact.html" class="btn-primary">Contact to Book →</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>

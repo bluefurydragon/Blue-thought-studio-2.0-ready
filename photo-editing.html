@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Editing | Blue Thought Studios</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../services.html" class="active">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../pricing.html">Pricing</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow"><a href="../services.html" style="color:inherit;text-decoration:none;">Services</a> &nbsp;/&nbsp; Photo Editing</p>
+        <h2>📸 Photo Editing</h2>
+        <p>
+          Photoshop-based editing that makes the image say what it was supposed to say.
+          Retouching, cleanup, compositing — whatever it takes to get it right.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <div class="overview-header">
+          <p class="section-label">What's Included</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <span class="card-icon">✂️</span>
+            <h3>Retouching & Cleanup</h3>
+            <p>Remove distractions, fix imperfections, clean up backgrounds. Makes a decent photo into a usable one.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🌈</span>
+            <h3>Color Grading</h3>
+            <p>Consistent tones and color correction for a polished, intentional look across a set or a single image.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🔧</span>
+            <h3>Compositing</h3>
+            <p>Merging multiple images, swapping backgrounds, or building a scene that couldn't be shot in one take.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📤</span>
+            <h3>Output for Any Platform</h3>
+            <p>Delivered at the right specs — web, print, Instagram, product listings, wherever it's going.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Who This Is For</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <h3>Photographers</h3>
+            <p>Outsource the editing while you focus on the shoot. Consistent style, faster turnaround.</p>
+          </div>
+          <div class="card">
+            <h3>E-commerce & Product Sellers</h3>
+            <p>Product photos that actually look professional — clean, sharp, and platform-ready.</p>
+          </div>
+          <div class="card">
+            <h3>Content Creators & Brands</h3>
+            <p>Social-ready visuals that don't look like they were filtered.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Pricing</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2.5rem;">
+          <div class="pricing-card">
+            <h3>Per Image</h3>
+            <div class="price">$10 – $30</div>
+            <p class="price-note">per image</p>
+            <div class="pricing-divider"></div>
+            <p>Basic retouching at the lower end, complex compositing or creative work at the higher end. Bulk rates available.</p>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Editing a large batch?</strong> Send the count and a sample — bulk pricing is available for sets of 10+.
+          <a href="../contact.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Get a quote.</a>
+        </div>
+
+        <div style="margin-top: 2.5rem; display:flex; gap: 1rem; flex-wrap:wrap;">
+          <a href="../contact.html" class="btn-primary">Request This Service →</a>
+          <a href="../services.html" class="btn-ghost">← Back to Services</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="../services.html">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>

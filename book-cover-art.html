@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book & Cover Art | Blue Thought Studios</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="../index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="../services.html" class="active">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="../index.html">Home</a>
+    <a href="../services.html">Services</a>
+    <a href="../pricing.html">Pricing</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow"><a href="../services.html" style="color:inherit;text-decoration:none;">Services</a> &nbsp;/&nbsp; Book & Cover Art</p>
+        <h2>📖 Book & Cover Art</h2>
+        <p>
+          A cover is the first sales pitch your book makes.
+          It needs to work in a thumbnail, on a shelf, and in someone's memory.
+          That's what this is built to do.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <div class="overview-header">
+          <p class="section-label">What's Included</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <span class="card-icon">📕</span>
+            <h3>Custom Cover Design</h3>
+            <p>Full front cover built for print and digital — KDP, IngramSpark, or wherever you're publishing.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🖋️</span>
+            <h3>Typography & Layout</h3>
+            <p>Title, author name, and any sub-copy placed with intention. Typography that fits the genre and tone.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🎨</span>
+            <h3>Interior Illustrations</h3>
+            <p>Chapter headers, character art, or scene illustrations for books that need visuals inside, not just outside.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🔄</span>
+            <h3>1–2 Revisions Included</h3>
+            <p>Room to adjust direction after seeing the first draft. You'll get something that actually represents your work.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Who This Is For</p>
+        </div>
+        <div class="grid" style="margin-bottom: 3rem;">
+          <div class="card">
+            <h3>Self-Publishing Authors</h3>
+            <p>Indie authors who want their book to look like it belongs on the same shelf as traditionally published work.</p>
+          </div>
+          <div class="card">
+            <h3>Small Publishers</h3>
+            <p>Publishing houses that need consistent, quality cover design without agency-level pricing.</p>
+          </div>
+          <div class="card">
+            <h3>Writers with Existing Art</h3>
+            <p>You have the concept or raw assets — need someone to assemble and design around them properly.</p>
+          </div>
+        </div>
+
+        <div class="overview-header">
+          <p class="section-label">Pricing</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2.5rem;">
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Most Requested</span>
+            <h3>Book Cover</h3>
+            <div class="price">$30 – $60</div>
+            <p class="price-note">per cover</p>
+            <div class="pricing-divider"></div>
+            <p>Front cover design with layout, title treatment, and composition. Final price reflects complexity and turnaround.</p>
+          </div>
+        </div>
+
+        <div class="notice">
+          <strong>Need a full wrap cover (front, spine, back)?</strong> That's a separate scope — send the details and we'll price it accurately.
+          <a href="../contact.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Contact us here.</a>
+        </div>
+
+        <div style="margin-top: 2.5rem; display:flex; gap: 1rem; flex-wrap:wrap;">
+          <a href="../contact.html" class="btn-primary">Request This Service →</a>
+          <a href="../services.html" class="btn-ghost">← Back to Services</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="../services.html">Services</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>
